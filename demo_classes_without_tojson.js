@@ -17,7 +17,7 @@ Paper.prototype = {
 
 function Book(name) {
 	this.name = name;
-} 
+}
 Book.prototype = {
 	setName: function(newName) { this.name = newName; },
 	getName: function() { return this.name; },
