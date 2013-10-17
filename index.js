@@ -27,7 +27,7 @@ exports.toString = function(object, createNewObjectFunction) {
 exports.toJSON = function(object, createNewObjectFunction) {
 	// convert the function to a string that can be evaluated later, at load time, to create a fresh object
 	if (!object)
-		return "undefined";
+		throw new Error("object is undefined");
 	var createNewObjectString = null;
 	if (object.createNewObjectString)
 		createNewObjectString = object.createNewObjectString;
@@ -71,6 +71,10 @@ exports.fromString = function(string, dirname) {
  * @return the original object used to create "string".
  */
 exports.fromJSON = function(json, dirname) {
+	if (!json)
+		throw new Error("json is undefined");
+	if (!dirname)
+		throw new Error("dirname is undefined");
 	if (!json.createNewObjectString) {
 		console.dir(json);
 		throw new Error("Cannot find createNewObjectString in string");
