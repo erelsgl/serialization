@@ -21,7 +21,11 @@ or class prototypes.
 
 This library suggests the following solution (pseudo-code).
 
-On the home machine:
+## Installation 
+
+	npm install serialization
+	
+## On the home machine
 
 	function createNewClassifier() {
 		// Write code to create a fresh  (untrained) classifier.
@@ -42,7 +46,7 @@ On the home machine:
 	// save myClassifierString to a file, and send to the remote server.
 	// the createNewClassifier function is also saved.
 
-On the remote server:
+## On the remote server
 
 	var myClassifierString = // read from file
 	

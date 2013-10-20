@@ -1,14 +1,16 @@
 {
-  "name": "serialize",
+  "name": "serialization",
   "version": "0.2.0",
-  "description": "Serialization in Node.js",
+  "description": "serialize and deserialize objects with function arguments in Node.js",
   "main": "index.js",
-  "repository": "https://github.com/erelsgl/serialize.git",
+  "repository": "https://github.com/erelsgl/serialization.git",
   "dependencies": { },
   "keywords": [
     "Node.js",
     "Serialization",
-    "serialize"
+    "serialize",
+    "deserialize",
+    "json"
   ],
   "author": "Erel Segal-Halevi",
   "license": "LGPL",
