@@ -1,11 +1,20 @@
-///// Define some classes for the demo:
+/**
+ * A library that can contain a single type of object (either Book or Paper).
+ */
 
-function Library(itemType) {
+function Library(itemType, itemFormatFunction) {
+	if (!(itemFormatFunction instanceof Function))
+		throw new Error("itemFormatFunction is not a function");
 	this.items = [];
 	this.itemType = itemType;
+	this.itemFormatFunction = itemFormatFunction;
 }
 Library.prototype = {
-	add: function(name) { this.items.push(new this.itemType(name)); },
+	add: function(name) { 
+		var newItem = new this.itemType(this.itemFormatFunction);
+		newItem.setName(name);
+		this.items.push(newItem); 
+	},
 	string: function () {
 		var titles = [];
 		this.items.forEach(function(item) {
@@ -20,12 +29,10 @@ Library.prototype.toJSON = function() {
 	var json = this.items.map(function(item) {
 		return item.name;
 	}, this);
-	//console.log('toJSON = '+JSON.stringify(json));
 	return json;
 }
 
 Library.prototype.fromJSON = function(json) {
-	//console.log('fromJSON '+JSON.stringify(json));
 	// restore the books or papers from their names (the type is kept during initialization):
 	json.forEach(function(itemname) {
 		this.add(itemname);
