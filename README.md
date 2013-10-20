@@ -54,7 +54,4 @@ On the remote server:
 	
 	myClassifier.classify(sample);
 
-See working demos in the demos folder.
-
-The more advanced demos do not work yet; see the demos/future_work folder.
- 
+The demos folder contains two working demos (demo1 and demo2), and one non-working demo (demo3) that is left for future work.
