@@ -1,0 +1,16 @@
+{
+  "name": "serialize",
+  "version": "0.2.0",
+  "description": "Serialization in Node.js",
+  "main": "index.js",
+  "repository": "https://github.com/erelsgl/serialize.git",
+  "dependencies": { },
+  "keywords": [
+    "Node.js",
+    "Serialization",
+    "serialize"
+  ],
+  "author": "Erel Segal-Halevi",
+  "license": "LGPL",
+  "readmeFilename": "README.md"
+}
