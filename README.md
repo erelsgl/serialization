@@ -1,4 +1,4 @@
-serialize
+serialization
 =========
 
 Serialize Javascript object hierarchies that contain multiple types and functions.
