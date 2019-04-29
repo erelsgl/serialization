@@ -5,7 +5,7 @@ Serialize Javascript object hierarchies that contain multiple types and function
 
 This library was built with the following use-case in mind:
 
-You have a complex classifier, such as in the [limud.js](https://github.com/erelsgl/limdu) framework. 
+You have a complex classifier, such as in the [limdu.js](https://github.com/erelsgl/limdu) framework. 
 For example, it may be a hierarchical multi-label classifier, based on a binary classifier, with a custom feature extractor.
 
 You want to train the classifier on your computer, and use the trained classifier on another machine.
@@ -39,7 +39,7 @@ This library suggests the following solution (pseudo-code).
 
 	myClassifier.train(dataset);
 	
-	var serialize = require('serialize'); // require the current package
+	var serialize = require('serialization'); // require the current package
 	
 	var myClassifierString = serialize.toString(myClassifier, createNewClassifier);
 	
@@ -50,7 +50,7 @@ This library suggests the following solution (pseudo-code).
 
 	var myClassifierString = // read from file
 	
-	var serialize = require('serialize'); // require the current package
+	var serialize = require('serialization'); // require the current package
 
 	var baseFolder = __dirname; // this comes in place of the "__dirname"s in createNewClassifier 
 
